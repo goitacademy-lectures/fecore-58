@@ -1,2 +1,2 @@
-images/icons
-*.svg
+# System folders settings
+.DS_Store
