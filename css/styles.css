@@ -1,0 +1,167 @@
+/* body {
+  font-family: sans-serif;
+  background-color: rgba(138, 43, 226, .5);
+}
+
+h1 {
+  color: tomato;
+}
+
+a {
+  text-decoration: line-through;
+}
+
+a {
+  display: inline-block;
+  border-radius: 30px;
+  overflow: hidden;
+} */
+
+/**
+  |============================
+  | Типи селекторів CSS
+  |============================
+*/
+/* .header-text {
+  font-size: 20px;
+  color: teal;
+}
+
+.section-text {
+  color: darkred;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.first-link {
+  font-family: sans-serif;
+  color: white;
+  font-size: 30px;
+}
+
+#title {
+  font-style: italic;
+}
+
+[href="https://"] {
+  color: hotpink;
+}
+
+[data-color] {
+  color: yellow;
+  font-size: 30px;
+}
+
+.header>.header-text {
+  background-color: black;
+} */
+
+/* .header .link {
+  background-color: tomato;
+} */
+
+/* .first-link.link {
+  font-family: serif;
+} */
+
+
+/**
+  |============================
+  | Псевдокласи стану
+  |============================
+*/
+/* .section-text:hover {
+  letter-spacing: 0.03em;
+  color: darkgreen;
+
+  transition: letter-spacing 500ms ease-in-out, color 500ms ease-in-out;
+}
+
+.section-text:focus {
+  font-size: 40px;
+}
+
+.header-button {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+  border: 2px dashed blueviolet;
+  cursor: pointer;
+}
+
+.header-button:active,
+.header-button:hover,
+.header-button:focus {
+  background-color: blueviolet;
+  border-color: transparent;
+} */
+
+/* .first-link.link:visited {
+  color: aquamarine;
+} */
+
+
+/**
+  |============================
+  | Формати кольорів
+  |============================
+*/
+/* .link {
+  color: #000000;
+  color: rgb(255, 255, 255);
+  color: rgba(55, 255, 0, 0.8);
+} */
+
+/**
+  |============================
+  | Каскад. Пріорітетність. Спадкування
+  |============================
+*/
+/*
+Властивості, які починаються зі слів
+font-     (властивості шрифтів)
+text-     (властивості тексту всередині тегів)
+
+а також, властивість color - спадкуються
+
+
+Порядок застосування властивостей:
+1. властивості, які успадковуються
+
+2. властивості від таблиці стилей браузера
+
+3. властивості, які встановлюються розробником
+*/
+.page {
+  font-family: sans-serif;
+  font-weight: 900;
+  color: darkred;
+}
+
+.list {
+  font-weight: 400;
+}
+
+.title {
+  color: tomato;
+}
+
+/* 10 */
+.link {
+  font-size: 20px;
+  color: blueviolet;
+  text-decoration: none;
+}
+
+/* 10 */
+.first-link {
+  color: crimson;
+}
