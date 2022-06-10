@@ -1,3 +1,8 @@
+/**
+  |============================
+  | Підключенння локальних шрифтів
+  |============================
+*/
 /* @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -7,26 +12,7 @@
   src: url(../fonts/OpenSans-Regular.ttf) format('ttf');
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url(../fonts/OpenSans-SemiBold.ttf) format('ttf');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url(../fonts/OpenSans-Bold.ttf) format('ttf');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-} */
+ */
 
 :root {
   /* fonts */
@@ -53,8 +39,6 @@ body {
 .link {
   text-decoration: none;
 }
-
-
 
 .list {
   list-style: none;
@@ -126,16 +110,6 @@ body {
   color: #FFFFFF;
 }
 
-/* .main-title::selection {
-  background-color: #FF6C00;
-  color: #717171;
-}
-
-.main-title::first-letter {
-  font-size: 100px;
-  color: #FF6C00;
-} */
-
 .section-title {
   font-style: normal;
   font-weight: 700;
@@ -186,6 +160,7 @@ body {
   color: var(--main-dark-theme);
 }
 
+/* Hero section */
 .hero {
   background-color: #191C26;
 }
