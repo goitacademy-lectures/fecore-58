@@ -1,166 +1,133 @@
-/**
-  |============================
-  | Підключенння локальних шрифтів
-  |============================
-*/
-/* @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url(../fonts/OpenSans-Regular.ttf) format('ttf');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+/* Якщо пишемо свою нормалізацію стилей, то описуємо всі властивості на початку файлу стилей styles.css */
+
+/* Встановлення всім елементам на сторінці властивості  border-box*/
+html {
+	box-sizing: border-box;
 }
- */
 
-:root {
-  /* fonts */
-  --main-font: "Open Sans";
-  --secondary-font: "Raleway";
-
-  /* text colors */
-  --accent-txt-cl: #FF6C00;
-  --main-light-theme: #303030;
-  --main-dark-theme: #ffffff;
-
-  /* bg-colors */
-
-  /* others */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
 }
 
 body {
-  font-family: var(--main-font), sans-serif;
-  font-size: 18px;
-  line-height: 1.67;
+	font-family: sans-serif;
+	font-size: 20px;
+	margin: 0;
 }
 
-/* common styles start */
+.section {
+	background-color: salmon;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.text {
+	background-color: blueviolet;
+	color: white;
+	width: 600px;
+	margin: 0;
+
+	margin-bottom: 100px;
+	/* margin-top: 50px; */
+
+	/* внутрішнє поле в середині тега */
+	padding: 20px;
+
+	/* внутрішня рамка в середині тега */
+	border: 10px dashed darkgreen;
+	/*border-right: 5px dashed teal;
+	border-bottom: 10px dotted darkgreen;
+	border-top: none; */
+
+	/* зовнішній відступ тега */
+	/* margin: 50px; */
+}
+
+.text:first-child {
+	background-color: teal;
+}
+
+.text:last-child {
+	margin-bottom: 0;
+}
+
 .link {
-  text-decoration: none;
+	display: inline-block;
+	background-color: tomato;
+	color: lightgray;
+	margin: 30px;
 }
 
-.list {
-  list-style: none;
+.test {
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-
-  background-color: transparent;
-
-  cursor: pointer;
+	padding: 10px 20px;
+	margin-left: 40px;
+	border: 10px dotted lightsalmon;
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: var(--accent-txt-cl);
-  color: var(--main-dark-theme);
+.box {
+	margin: 0;
+	padding: 30px;
+	list-style: none;
+
+	background-color: lightblue;
 }
 
-.btn-mode-light {
-  color: var(--main-light-theme);
+.inner-box {
+	width: 400px;
+	height: 100px;
+	background-color: yellow;
+	color: azure;
+	font-size: 60px;
+	text-align: center;
+	line-height: 100px;
+
+	margin-bottom: 20px;
+
+	border: 2px solid red;
+
+	/* центрування блочних елементів */
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.btn-mode-dark {
-  color: var(--main-dark-theme);
+.inner-box:last-child {
+	margin-bottom: 0;
 }
 
-.socials-link {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
-
-  color: var(--main-light-theme);
+.inner-box:not(:last-child) {
+	margin-bottom: 20px;
 }
 
-.socials-link:hover,
-.socials-link:focus {
-  color: var(--accent-txt-cl);
+/*
+
+an + b
+
+a - період циклу (будь-яке число)
+
+n - лічильник (від 0 до безкінечності)
+
+b - зміщення циклу (будь-яке число)
+
+*/
+/* не парні елементи */
+.inner-box:nth-child(2n + 1) {
+	background-color: teal;
+}
+/* парні елементи */
+.inner-box:nth-child(2n) {
+	background-color: tomato;
 }
 
-.uppertitle {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.inner-box:nth-child(3n + 2) {
+	background-color: blueviolet;
 }
 
-.uppertitle-mode-light {
-  color: #303030;
-}
-
-.uppertitle-mode-dark {
-  color: rgba(157, 164, 189, 0.6);
-}
-
-.main-title {
-  font-family: var(--secondary-font);
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 85px;
-  letter-spacing: 0.05em;
-  color: #FFFFFF;
-}
-
-.section-title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 49px;
-  letter-spacing: 0.05em;
-}
-
-.section-title-mode-light {
-  color: #303030;
-}
-
-.section-title-mode-dark {
-  color: #FFFFFF;
-}
-
-/* common styles end */
-
-/* Header section */
-.page-header {
-  background-color: #191C26;
-}
-
-.header-link {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-  color: var(--main-dark-theme);
-}
-
-.current-link {
-  color: var(--accent-txt-cl);
-}
-
-.header-link:hover,
-.header-link:focus {
-  color: var(--accent-txt-cl);
-}
-
-.header-contact {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
-  color: var(--main-dark-theme);
-}
-
-/* Hero section */
-.hero {
-  background-color: #191C26;
+.inner-box:nth-last-child(9) {
+	background-color: blue;
 }
