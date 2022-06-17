@@ -1,20 +1,10 @@
 # Frontend online 58
 
-## Заняття 4:
+## Заняття 6:
 
-- Абсолютні одиниці вимірювання: px
-- Властивості оформелння тексту: text-align, text-decoration, text-transform, text-indent, line-height, letter-spacing, word-spacing, text-shadow
-- Підключення зовнішніх шрифтів через GoogleFonts
-- Сімейства шрифту serif та sans-serif
-- Властивості оформлення шрифту: font-size, font-weight, font-style, font-family
-- Псевдоелементи текстового контенту ::firstLetter та ::selection
-
-Додатково:
-
-- CSS-змінні та селектор :root
-- Як винести загальні властивості кольорів та набори шрифтів в змінні
-- Переваги зберігання цих властивостей в палітрі
-- Підключення шрифтів з GoogleFonts, опції (жирність, стиль, символи)
-- Підключення набору з декількох шрифтів одним посиланням
-- Підключення локальных шрифтів
-- Директива @font-face та властивість font-display
+- flex-контейнер та flex-елемент
+- Властивість display:flex | inline-flex
+- flex-вісі та властивість flex-direction
+- Вирівнювання flex-елементів на вісі, властивості justify-content, align-items
+- Багаторядкові flex-контейнери та властивість flex-wrap
+- Властивість flex-елемента: width та flex-basis, flex-grow, flex-shrink
