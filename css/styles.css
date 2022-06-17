@@ -11,6 +11,8 @@
 	/* bg-colors */
 
 	/* others */
+	--items: 3;
+	--indent: 30px;
 }
 
 body {
@@ -19,7 +21,35 @@ body {
 	line-height: 1.86;
 }
 
+/* reset */
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
 /* common styles start */
+.section {
+	padding-top: 130px;
+	padding-bottom: 130px;
+}
+.container {
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+
+	outline: 1px solid red;
+}
 .link {
 	text-decoration: none;
 	color: currentColor;
@@ -27,9 +57,12 @@ body {
 
 .list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .btn {
+	padding: 12px 20px;
 	font-family: inherit;
 	font-weight: 600;
 	font-size: 12px;
@@ -39,6 +72,7 @@ body {
 
 	background-color: transparent;
 	border: 1px solid var(--accent-txt-cl);
+	border-radius: 25px;
 	cursor: pointer;
 }
 
@@ -71,6 +105,8 @@ body {
 }
 
 .uppertitle {
+	margin-bottom: 20px;
+
 	font-weight: 600;
 	font-size: 11px;
 	line-height: 1.36;
@@ -96,7 +132,6 @@ body {
 }
 
 .section-title {
-	font-style: normal;
 	font-weight: 700;
 	font-size: 42px;
 	line-height: 1.16;
@@ -104,14 +139,18 @@ body {
 }
 
 .section-title-mode-light {
+	margin-bottom: 20px;
 	color: #303030;
 }
 
 .section-title-mode-dark {
+	margin-bottom: 44px;
 	color: #ffffff;
 }
 
 .section-subtitle {
+	margin-bottom: 20px;
+
 	font-size: 18px;
 	line-height: 1.67;
 	letter-spacing: 0.02em;
@@ -121,6 +160,22 @@ body {
 }
 .section-subtitle-mode-dark {
 	color: #ffffff;
+}
+
+/**
+  |============================
+  | сітка із застосуванням flex-box
+  |============================
+*/
+.card-set {
+	display: flex;
+	flex-wrap: wrap;
+	margin: calc(-1 * var(--indent) / 2);
+}
+
+.card-set-item {
+	flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+	margin: calc(var(--indent) / 2);
 }
 /* common styles end */
 
@@ -158,7 +213,28 @@ body {
 	background-color: #191c26;
 }
 
+.header-container {
+	display: flex;
+	align-items: center;
+}
+
+.header-logo {
+	margin-right: 71px;
+}
+
+.header-list {
+	display: flex;
+}
+
+.header-list-item:not(:last-child) {
+	margin-right: 40px;
+}
+
 .header-link {
+	display: block;
+	padding-top: 52px;
+	padding-bottom: 52px;
+
 	font-weight: 600;
 	font-size: 12px;
 	line-height: 1.33;
@@ -175,6 +251,10 @@ body {
 	color: var(--accent-txt-cl);
 }
 
+.header-group {
+	margin-left: auto;
+}
+
 .header-contact {
 	font-weight: 600;
 	font-size: 12px;
@@ -183,6 +263,10 @@ body {
 	text-transform: uppercase;
 
 	color: var(--main-dark-theme);
+}
+
+.header-btn {
+	margin-left: 40px;
 }
 
 /* Hero section */
@@ -198,16 +282,63 @@ body {
 }
 /* Hero section */
 /* About section */
+.about-container {
+	display: flex;
+}
+
+.about-list {
+	display: flex;
+}
+
+.about-item:not(:last-child) {
+	margin-right: 30px;
+}
+
+.about-group {
+	flex-basis: 500px;
+	margin-left: 64px;
+}
+
+.about-descr {
+	margin-bottom: 40px;
+}
 /* Price section */
 .price {
 	background-color: #111319;
 }
 
 .price-list {
+	display: flex;
+	margin-bottom: 50px;
+
 	font-size: 18px;
 	line-height: 1.67;
 	letter-spacing: 0.02em;
 	color: #9da4bd;
+}
+
+.price-list-item {
+	flex-basis: 50%;
+	outline: 1px solid blue;
+}
+
+.price-inner-item:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.price-inner-list {
+	padding: 30px 40px;
+}
+
+.price-inner-item {
+	display: flex;
+	justify-content: space-between;
+}
+
+.price-btn {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 /* Benefits section */
 .benefits-amount {
@@ -236,6 +367,17 @@ body {
 .team {
 	background-color: #f7f7f7;
 }
+.team-title {
+	margin-bottom: 44px;
+}
+
+.team-item {
+	outline: 1px solid blueviolet;
+}
+
+.team-wrapper {
+	padding: 30px 0;
+}
 
 .team-subtitle {
 	font-size: 18px;
@@ -253,6 +395,9 @@ body {
 	color: #ff6c00;
 }
 /* Portfolio section */
+.portfolio-list {
+	--items: 4;
+}
 
 /* Contacts section */
 .contacts {
