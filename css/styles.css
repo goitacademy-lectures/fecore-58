@@ -106,6 +106,8 @@ img {
 
 .uppertitle {
 	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
 
 	font-weight: 600;
 	font-size: 11px;
@@ -120,6 +122,17 @@ img {
 
 .uppertitle-mode-dark {
 	color: rgba(157, 164, 189, 0.6);
+}
+
+.uppertitle::before {
+	content: "";
+
+	margin-right: 20px;
+	display: inline-block;
+	width: 60px;
+	height: 1px;
+
+	background-color: #303030;
 }
 
 .main-title {
@@ -244,6 +257,19 @@ img {
 
 .current-link {
 	color: var(--accent-txt-cl);
+	display: flex;
+	align-items: center;
+}
+
+.current-link::before {
+	content: "";
+	width: 20px;
+	height: 4px;
+	display: inline-block;
+	margin-right: 10px;
+
+	background-color: var(--accent-txt-cl);
+	border-radius: 2px;
 }
 
 .header-link:hover,

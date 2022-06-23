@@ -1,10 +1,15 @@
 # Frontend online 58
 
-## Заняття 6:
+## Заняття 7:
 
-- flex-контейнер та flex-елемент
-- Властивість display:flex | inline-flex
-- flex-вісі та властивість flex-direction
-- Вирівнювання flex-елементів на вісі, властивості justify-content, align-items
-- Багаторядкові flex-контейнери та властивість flex-wrap
-- Властивість flex-елемента: width та flex-basis, flex-grow, flex-shrink
+- Сітка елементів з використанням властивості flex
+
+===
+
+- Типи растрової графіки: jpg, png, webp
+- Контентні та декоративні зображення
+- Властивості bg-color, bg-image, bg-repeat, bg-position, bg-size, bg-attachment
+- Багатошаровий фон
+- Градієнти
+- Псевдоелементи ::before та ::after
+- CSS-тіні та властивість box-shadow
