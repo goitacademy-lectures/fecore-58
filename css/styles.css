@@ -48,7 +48,7 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 
-	outline: 1px solid red;
+	/* outline: 1px solid red; */
 }
 .link {
 	text-decoration: none;
@@ -330,7 +330,15 @@ img {
 }
 /* Price section */
 .price {
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+
 	background-color: #111319;
+	background-image: url(../images/price/price-bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .price-list {
@@ -345,11 +353,27 @@ img {
 
 .price-list-item {
 	flex-basis: 50%;
-	outline: 1px solid blue;
+}
+
+.price-list-item:first-child {
+	background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list-item:last-child {
+	background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .price-inner-item:not(:last-child) {
 	margin-bottom: 20px;
+}
+
+.price-inner-item::before {
+	content: "";
+	display: inline-block;
+	/* width: 100%; */
+	flex-grow: 1;
+	height: 1px;
+	background-color: rgba(157, 164, 189, 0.12);
 }
 
 .price-inner-list {
@@ -358,7 +382,12 @@ img {
 
 .price-inner-item {
 	display: flex;
-	justify-content: space-between;
+	align-items: baseline;
+	gap: 6px;
+}
+
+.price-inner-desc {
+	order: -1;
 }
 
 .price-btn {
@@ -375,6 +404,7 @@ img {
 	letter-spacing: 0.05em;
 	color: #303030;
 }
+
 .benefits-decor {
 	font-weight: 600;
 	font-size: 16px;
@@ -393,12 +423,9 @@ img {
 .team {
 	background-color: #f7f7f7;
 }
+
 .team-title {
 	margin-bottom: 44px;
-}
-
-.team-item {
-	outline: 1px solid blueviolet;
 }
 
 .team-wrapper {
@@ -406,6 +433,8 @@ img {
 }
 
 .team-subtitle {
+	margin-bottom: 8px;
+
 	font-size: 18px;
 	line-height: 1.38;
 	text-align: center;
@@ -414,11 +443,71 @@ img {
 }
 
 .team-position {
+	margin-bottom: 30px;
+
 	font-size: 14px;
 	line-height: 1.36;
 	text-align: center;
 	letter-spacing: 0.02em;
 	color: #ff6c00;
+}
+
+/* .social-media-link {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	background-image: url(../images/icons/instagram.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.social-media-link:hover {
+	background-image: url(../images/icons/instagram-1.svg);
+} */
+
+/* svg {
+	fill: #ff6c00;
+}
+svg:hover {
+	fill: #bf00ff;
+} */
+/**
+	|============================
+	| Оформлення іконок
+	|============================
+*/
+.social-media {
+	display: flex;
+	justify-content: center;
+}
+.social-media-item:not(:last-child) {
+	margin-right: 10px;
+}
+
+.social-media-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	color: #303030;
+	background-color: #fff;
+	border-radius: 50%;
+	/* outline: 1px solid red; */
+}
+/* Встановлюємо fill на іконку при ховері на посилання */
+/* .social-media-link:hover .social-media-icon,
+.social-media-link:focus .social-media-icon {
+	fill: #ff6c00;
+} */
+
+.social-media-link:hover,
+.social-media-link:focus {
+	color: #ff6c00;
+	background-color: #555555;
+}
+
+.social-media-icon {
+	fill: currentColor;
 }
 /* Portfolio section */
 .portfolio-list {
@@ -428,6 +517,10 @@ img {
 /* Contacts section */
 .contacts {
 	background-color: #191c26;
+	background-image: url(../images/contacts/contacts-bg.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top 50% left calc(50% + 312px);
 }
 
 .contatcs-uppertitle {
@@ -435,11 +528,23 @@ img {
 }
 
 .contacts-address {
+	margin-bottom: 70px;
+
 	font-style: normal;
 	font-size: 18px;
 	line-height: 1.67;
 	letter-spacing: 0.02em;
 	color: #9da4bd;
+}
+
+.contacts-item:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.contacts-link {
+	width: 270px;
+	display: flex;
+	gap: 16px;
 }
 
 .contacts-scedule {
@@ -455,4 +560,21 @@ img {
 	line-height: 1.36;
 	letter-spacing: 0.2em;
 	color: #9da4bd;
+}
+
+/**
+	|============================
+	| Робота з декількома кольорами
+	| на одній іконці
+	|============================
+*/
+.icon-astronaut {
+	--color1: #303030;
+	--color2: #ff6c00;
+	--color3: #ff0000;
+}
+.icon-astronaut:hover {
+	--color1: #db3fa9;
+	--color2: #00aeff;
+	--color3: #44ff00;
 }
