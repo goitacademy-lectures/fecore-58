@@ -522,13 +522,68 @@ img {
 	margin-right: auto;
 }
 /* Benefits section */
+.benefits-container {
+	display: flex;
+}
+
+.benefits-left-side {
+	flex-basis: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+.benefits-list {
+	flex-basis: 370px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	/* gap: 30px; */
+}
+
+.benefits-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: 170px;
+	min-height: 133px;
+	padding: 20px;
+
+	background-color: #f7f7f7;
+}
+
+.benefits-item:nth-child(2n + 1) {
+	margin-bottom: 30px;
+	margin-right: 30px;
+}
+.benefits-item:nth-child(2n) {
+	margin-top: 30px;
+}
+
 .benefits-amount {
+	position: relative;
 	font-weight: 700;
 	font-size: 42px;
 	line-height: 1.35;
 	text-align: center;
 	letter-spacing: 0.05em;
 	color: #303030;
+}
+
+.benefits-amount::before {
+	content: "\002B";
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	transform: translate(12px, 0);
+	transform-origin: left center;
+
+	font-weight: 600;
+	font-size: 16px;
+	line-height: calc(22 / 16);
+	color: #ff6c00;
 }
 
 .benefits-decor {
@@ -544,6 +599,10 @@ img {
 	line-height: 1.36;
 	text-align: center;
 	color: #303030;
+}
+
+.benefits-right-side {
+	flex-basis: 50%;
 }
 /* Team section */
 .team {
@@ -683,6 +742,19 @@ svg:hover {
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: top 50% left calc(50% + 312px);
+}
+
+.contacts-container {
+	display: flex;
+}
+
+.contacts-left-side {
+	flex-basis: 50%;
+}
+
+.contacts-right-side {
+	flex-basis: 50%;
+	margin-left: 100px;
 }
 
 .contatcs-uppertitle {

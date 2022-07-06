@@ -22,6 +22,14 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 		<!-- Animate.css end -->
 
+		<!-- Choices base CSS (optional)start -->
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/base.min.css" /> -->
+		<!-- Choices base CSS (optional)end -->
+
+		<!-- Choices CSS start -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+		<!-- Choices CSS end -->
+
 		<!-- custom styles start -->
 		<link rel="stylesheet" href="./css/styles.css" />
 		<!-- custom styles end -->
@@ -185,41 +193,34 @@
 
 			<!-- Секція Benefits -->
 			<section class="benefits section">
-				<div class="container">
-					<ul class="benefits-list list">
-						<li class="benefits-item">
-							<p class="benefits-amount">600</p>
-							<sup class="benefits-decor">&#43;</sup>
-							<p class="benefits-descr">Довольных клиентов в день</p>
-						</li>
-						<li class="benefits-item">
-							<p class="benefits-amount">50</p>
-							<sup class="benefits-decor">&#43;</sup>
-							<p class="benefits-descr">Наград за отличный сервис</p>
-						</li>
-						<li class="benefits-item">
-							<p class="benefits-amount">20</p>
-							<sup class="benefits-decor">&#43;</sup>
-							<p class="benefits-descr">Лучших мастеров Киева</p>
-						</li>
-						<li class="benefits-item">
-							<p class="benefits-amount">100</p>
-							<sup class="benefits-decor">&#43;</sup>
-							<p class="benefits-descr">Подарков постоянным клиентам</p>
-						</li>
-					</ul>
-					<div>
+				<div class="container benefits-container">
+					<div class="benefits-left-side">
+						<ul class="benefits-list list">
+							<li class="benefits-item">
+								<p class="benefits-amount">600</p>
+								<p class="benefits-descr">Довольных клиентов в день</p>
+							</li>
+							<li class="benefits-item">
+								<p class="benefits-amount">50</p>
+								<p class="benefits-descr">Наград за отличный сервис</p>
+							</li>
+							<li class="benefits-item">
+								<p class="benefits-amount">20</p>
+								<p class="benefits-descr">Лучших мастеров Киева</p>
+							</li>
+							<li class="benefits-item">
+								<p class="benefits-amount">100</p>
+								<p class="benefits-descr">Подарков постоянным клиентам</p>
+							</li>
+						</ul>
+					</div>
+					<div class="benefits-right-side">
 						<p class="uppertitle uppertitle-mode-light">старая традиционная школа</p>
 						<h2 class="section-title section-title-mode-light">Почему приходят именно к нам?</h2>
 						<p class="section-subtitle section-subtitle-mode-light">
 							О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.
 						</p>
 					</div>
-
-					<!-- Багатокольорова іконка -->
-					<!-- <svg class="icon-astronaut" width="70" height="70">
-						<use href="./images/icons.svg#icon-astronaut"></use>
-					</svg> -->
 				</div>
 			</section>
 
@@ -555,13 +556,56 @@
 
 			<!-- Секція Contacts -->
 			<section class="contacts section">
-				<div class="container">
-					<div>
+				<div class="container contacts-container">
+					<div class="contacts-left-side">
 						<h2 class="section-title section-title-mode-dark">Онлайн-запись</h2>
-						<form></form>
-						<button class="btn btn-mode-dark" type="button">отправить</button>
+						<form name="contact-form" autocomplete="on" novalidate>
+							<!-- <label for="user-name">Имя*</label>
+							<input type="text" id="user-name" /> -->
+							<label class="contact-form-group">
+								<input
+									class="contact-form-field"
+									type="text"
+									name="user-name"
+									placeholder="Antony Black"
+									minlength="2"
+								/>
+								<span class="contact-form-label">Имя*</span>
+								<span class="contact-form-error">Минимальния длинна 2 символа</span>
+								<svg class="contact-form-error-icon" width="20" height="20">
+									<use href="./images/icons.svg#icon-attention"></use>
+									<use href="./images/icons.svg#icon-success"></use>
+								</svg>
+							</label>
+							<label class="contact-form-group">
+								<input class="contact-form-field" type="phone" name="user-phone" placeholder="+38 (099) 123-45-67" />
+								<span class="contact-form-label">Телефон*</span>
+								<span class="contact-form-error">Введите телефон в указанном формате</span>
+								<svg class="contact-form-error-icon" width="20" height="20">
+									<use href="./images/icons.svg#icon-attention"></use>
+									<use href="./images/icons.svg#icon-success"></use>
+								</svg>
+							</label>
+							<label class="contact-form-group">
+								<textarea
+									class="contact-form-message"
+									name="user-message"
+									rows="5"
+									placeholder="Enter your message"
+									minlength="3"
+								></textarea>
+								<span class="contact-form-label">сообщение</span>
+								<span class="contact-form-error">Коментарий должен содержать от 3 до 1000 символов</span>
+								<svg class="contact-form-error-icon" width="20" height="20">
+									<use href="./images/icons.svg#icon-attention"></use>
+									<use href="./images/icons.svg#icon-success"></use>
+								</svg>
+							</label>
+							<button class="btn btn-mode-dark" type="submit">отправить</button>
+							<!-- <button type="reset">Reset form</button> -->
+						</form>
 					</div>
-					<div>
+					<div class="contacts-right-side">
 						<h2 class="section-title section-title-mode-dark">Контакты</h2>
 						<address class="contacts-address">
 							<ul class="contacts-list list">
@@ -632,8 +676,79 @@
 						<use href="./images/icons.svg#icon-close"></use>
 					</svg>
 				</button>
+
+				<form class="register-form">
+					<strong>Присоединяйтесь к нам!</strong>
+					<label>
+						<span>Имя*</span>
+						<input type="text" name="user-name" placeholder="" />
+
+						<svg width="20" height="20">
+							<use href="./images/icons.svg#icon-user"></use>
+						</svg>
+					</label>
+
+					<label>
+						<span>Почта*</span>
+						<input type="text" name="user-name" placeholder="" />
+
+						<svg width="20" height="20">
+							<use href="./images/icons.svg#icon-mail"></use>
+						</svg>
+					</label>
+
+					<label>
+						<span>Пароль*</span>
+						<input type="password" name="user-pass" />
+						<svg width="20" height="20">
+							<use href="./images/icons.svg#icon-unlock"></use>
+							<use href="./images/icons.svg#icon-lock"></use>
+						</svg>
+					</label>
+
+					<label for="user-location">Виберите район</label>
+					<select class="js-choice" id="user-location">
+						<option>Шевченковский</option>
+						<option>Соломянский</option>
+						<option>Голосеевський</option>
+						<option>Деснянский</option>
+					</select>
+
+					<div class="" role="group" aria-labelledby="payment-method">
+						<p class="" id="payment-method">Виберите способ оплаты</p>
+						<label>
+							<input type="radio" name="user-payment" value="visa" checked />
+							<svg width="36" height="32">
+								<use href="./images/icons.svg#icon-visa"></use>
+							</svg>
+						</label>
+						<label>
+							<input type="radio" name="user-payment" value="mastercard" />
+							<svg width="36" height="32">
+								<use href="./images/icons.svg#icon-mastercard"></use>
+							</svg>
+						</label>
+					</div>
+
+					<label class="form-checkbox">
+						<input type="checkbox" name="user-agreement" checked />
+						<span>
+							<svg width="20" height="20">
+								<use href="./images/icons.svg#icon-check"></use>
+							</svg>
+						</span>
+						<span>Даю согласие на использование и обработку персональных данных</span>
+					</label>
+
+					<button type="submit">Зарегистрироваться</button>
+				</form>
 			</div>
 		</div>
+
+		<!-- Choices JavaScript (latest) start -->
+		<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+		<!-- <script src="./js/datalist.js"></script> -->
+		<!-- Choices JavaScript (latest) end -->
 
 		<script src="./js/header-scroll.js"></script>
 		<script src="./js/modal.js"></script>
