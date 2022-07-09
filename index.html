@@ -560,33 +560,41 @@
 					<div class="contacts-left-side">
 						<h2 class="section-title section-title-mode-dark">Онлайн-запись</h2>
 						<form name="contact-form" autocomplete="on" novalidate>
-							<!-- <label for="user-name">Имя*</label>
-							<input type="text" id="user-name" /> -->
-							<label class="contact-form-group">
-								<input
-									class="contact-form-field"
-									type="text"
-									name="user-name"
-									placeholder="Antony Black"
-									minlength="2"
-								/>
-								<span class="contact-form-label">Имя*</span>
-								<span class="contact-form-error">Минимальния длинна 2 символа</span>
-								<svg class="contact-form-error-icon" width="20" height="20">
-									<use href="./images/icons.svg#icon-attention"></use>
-									<use href="./images/icons.svg#icon-success"></use>
-								</svg>
-							</label>
-							<label class="contact-form-group">
-								<input class="contact-form-field" type="phone" name="user-phone" placeholder="+38 (099) 123-45-67" />
-								<span class="contact-form-label">Телефон*</span>
-								<span class="contact-form-error">Введите телефон в указанном формате</span>
-								<svg class="contact-form-error-icon" width="20" height="20">
-									<use href="./images/icons.svg#icon-attention"></use>
-									<use href="./images/icons.svg#icon-success"></use>
-								</svg>
-							</label>
-							<label class="contact-form-group">
+							<div class="contact-form-wrapper">
+								<label class="contact-form-group">
+									<input
+										class="contact-form-field"
+										type="text"
+										name="user-name"
+										placeholder="Antony Black"
+										minlength="3"
+										required
+									/>
+									<span class="contact-form-label">Имя*</span>
+									<span class="contact-form-error">Минимальния длинна 3 символа</span>
+									<svg class="contact-form-error-icon" width="15" height="15">
+										<use class="icon-attention" href="./images/icons.svg#icon-attention"></use>
+										<use class="icon-success" href="./images/icons.svg#icon-success"></use>
+									</svg>
+								</label>
+								<label class="contact-form-group">
+									<input
+										class="contact-form-field"
+										type="phone"
+										name="user-phone"
+										placeholder="+38 (099) 123-45-67"
+										required
+										id="user-phone"
+									/>
+									<span class="contact-form-label">Телефон*</span>
+									<span class="contact-form-error">Введите телефон в указанном формате</span>
+									<svg class="contact-form-error-icon" width="15" height="15">
+										<use class="icon-attention" href="./images/icons.svg#icon-attention"></use>
+										<use class="icon-success" href="./images/icons.svg#icon-success"></use>
+									</svg>
+								</label>
+							</div>
+							<label class="contact-form-message-group">
 								<textarea
 									class="contact-form-message"
 									name="user-message"
@@ -597,12 +605,11 @@
 								<span class="contact-form-label">Cообщение</span>
 								<span class="contact-form-error">Коментарий должен содержать от 3 до 1000 символов</span>
 								<svg class="contact-form-error-icon" width="20" height="20">
-									<use href="./images/icons.svg#icon-attention"></use>
-									<use href="./images/icons.svg#icon-success"></use>
+									<use class="icon-attention" href="./images/icons.svg#icon-attention"></use>
+									<use class="icon-success" href="./images/icons.svg#icon-success"></use>
 								</svg>
 							</label>
 							<button class="btn btn-mode-dark" type="submit">отправить</button>
-							<!-- <button type="reset">Reset form</button> -->
 						</form>
 					</div>
 					<div class="contacts-right-side">
@@ -669,7 +676,7 @@
 		</footer>
 
 		<!-- Модальне вікно -->
-		<div class="backdrop is-hidden" data-modal>
+		<div class="backdrop" data-modal>
 			<div class="modal">
 				<button class="modal-close-btn" type="button" data-modal-close>
 					<svg width="20" height="20">
@@ -716,28 +723,43 @@
 
 					<div class="" role="group" aria-labelledby="payment-method">
 						<p class="" id="payment-method">Виберите способ оплаты</p>
-						<label>
-							<input type="radio" name="user-payment" value="visa" checked />
-							<svg width="36" height="32">
-								<use href="./images/icons.svg#icon-visa"></use>
-							</svg>
-						</label>
-						<label>
-							<input type="radio" name="user-payment" value="mastercard" />
-							<svg width="36" height="32">
-								<use href="./images/icons.svg#icon-mastercard"></use>
-							</svg>
-						</label>
+						<div class="payment-group">
+							<label class="payment-label">
+								<input
+									class="visually-hidden payment-input"
+									type="radio"
+									name="user-payment"
+									value="visa"
+									checked
+									required
+								/>
+								<svg class="payment-icon" width="36" height="32">
+									<use href="./images/icons.svg#icon-visa"></use>
+								</svg>
+							</label>
+							<label class="payment-label">
+								<input
+									class="visually-hidden payment-input"
+									type="radio"
+									name="user-payment"
+									value="mastercard"
+									required
+								/>
+								<svg class="payment-icon" width="36" height="32">
+									<use href="./images/icons.svg#icon-mastercard"></use>
+								</svg>
+							</label>
+						</div>
 					</div>
 
 					<label class="form-checkbox">
-						<input type="checkbox" name="user-agreement" checked />
-						<span>
-							<svg width="20" height="20">
+						<input class="visually-hidden form-checkbox-input" type="checkbox" name="user-agreement" checked />
+						<span class="form-checkbox-custom-checkbox">
+							<svg class="form-checkbox-icon" width="12" height="12">
 								<use href="./images/icons.svg#icon-check"></use>
 							</svg>
 						</span>
-						<span>Даю согласие на использование и обработку персональных данных</span>
+						<span class="form-checkbox-agreement">Даю согласие на использование и обработку персональных данных</span>
 					</label>
 
 					<button type="submit">Зарегистрироваться</button>
@@ -747,8 +769,23 @@
 
 		<!-- Choices JavaScript (latest) start -->
 		<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-		<!-- <script src="./js/datalist.js"></script> -->
+		<script src="./js/datalist.js"></script>
 		<!-- Choices JavaScript (latest) end -->
+
+		<!-- Inputmask start -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/inputmask/inputmask.min.js"
+			integrity="sha512-DVfS/GbZzLMmxBL/CW92N84eHP2Fq9d+r9RKbvctcvzISVfu+WvD+MCvbK9j8I6nVLrntGo3UUVrNFUDX0ukBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="./js/input-mask.js"></script>
+		<!-- Inputmask end -->
 
 		<script src="./js/header-scroll.js"></script>
 		<script src="./js/modal.js"></script>
