@@ -1085,9 +1085,21 @@ svg:hover {
 
 /* message field */
 .contact-form-message-group {
+	position: relative;
 	display: block;
 	width: 100%;
 	margin-bottom: 44px;
+}
+
+.contact-form-message-group .contact-form-label {
+	top: 0;
+}
+
+.contact-form-message:focus + .contact-form-label,
+.contact-form-message:not(:placeholder-shown) + .contact-form-label {
+	transform: translateY(-20px) scale(0.7);
+	transform-origin: top left;
+	color: #ffffff;
 }
 
 .contact-form-message {
