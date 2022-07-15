@@ -1,0 +1,49 @@
+.socials-link {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	letter-spacing: 0.2em;
+
+	color: var(--main-light-theme);
+
+	transition: color var(--anim-slow);
+
+	&:hover,
+	&:focus {
+		color: var(--accent-txt-cl);
+	}
+}
+
+.social-media {
+	display: flex;
+	justify-content: center;
+}
+
+.social-media__item {
+	&:not(:last-child) {
+		margin-right: 10px;
+	}
+}
+
+.social-media__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	color: #303030;
+	background-color: #fff;
+	border-radius: 50%;
+
+	transition: color var(--anim-fast), background-color var(--anim-fast);
+
+	&:hover,
+	&:focus {
+		color: #ff6c00;
+		background-color: #555555;
+	}
+}
+
+.social-media__icon {
+	fill: currentColor;
+}

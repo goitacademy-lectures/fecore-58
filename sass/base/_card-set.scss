@@ -1,0 +1,14 @@
+/**
+  |============================
+  | сітка із застосуванням flex-box
+  |============================
+*/
+.card-set {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--indent);
+}
+
+.card-set__item {
+	flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+}

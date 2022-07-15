@@ -1,0 +1,12 @@
+.portfolio {
+	@extend %section;
+}
+
+.portfolio__list {
+	--items: 4;
+}
+
+.portfolio__item {
+	position: relative;
+	overflow: hidden;
+}
