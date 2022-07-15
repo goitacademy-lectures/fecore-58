@@ -1,0 +1,9 @@
+body {
+	font-family: var(--main-font), sans-serif;
+	font-size: 14px;
+	line-height: 1.86;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
+}

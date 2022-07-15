@@ -1,0 +1,14 @@
+.section-subtitle {
+	margin-bottom: 20px;
+
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
+
+	&-mode-light {
+		color: #555555;
+	}
+	&-mode-dark {
+		color: #ffffff;
+	}
+}

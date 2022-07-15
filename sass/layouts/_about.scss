@@ -1,0 +1,25 @@
+.about {
+	// @extend %section;
+	@include section(200px);
+}
+
+.about-container {
+	display: flex;
+}
+
+.about-list {
+	display: flex;
+}
+
+.about-item:not(:last-child) {
+	margin-right: 30px;
+}
+
+.about-group {
+	flex-basis: 500px;
+	margin-left: 64px;
+}
+
+.about-descr {
+	margin-bottom: 40px;
+}

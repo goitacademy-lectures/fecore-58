@@ -1,0 +1,59 @@
+/* slider start */
+.slider-pagination {
+	position: absolute;
+	top: 50%;
+	right: 55px;
+	transform: translateY(-50%);
+
+	color: #fff;
+}
+
+.slider-pagination-item {
+	margin-left: auto;
+	margin-bottom: 12px;
+	width: 8px;
+	height: 2px;
+	background-color: #9da4bd;
+}
+
+.slider-pagination-item:last-child {
+	margin-bottom: 0;
+}
+
+.slider-pagination-item.current {
+	width: 18px;
+	background-color: #fff;
+}
+
+.slider-controls {
+	position: absolute;
+	bottom: 40px;
+	right: 55px;
+
+	display: flex;
+	align-items: center;
+	gap: 26px;
+}
+.slider-btn {
+	padding: 8px 0;
+	min-width: 60px;
+
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	letter-spacing: 0.1em;
+	color: #ffffff;
+
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #ffffff;
+	cursor: pointer;
+}
+
+.slider-btn-prev {
+	text-align: left;
+	opacity: 0.6;
+}
+.slider-btn-next {
+	text-align: right;
+}

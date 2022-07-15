@@ -1,0 +1,30 @@
+.btn {
+	padding: 12px 20px;
+	font-family: inherit;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+
+	background-color: transparent;
+	border: 1px solid var(--accent-txt-cl);
+	border-radius: 25px;
+	cursor: pointer;
+
+	transition: color var(--anim-slow), background-color var(--anim-fast);
+
+	&:hover,
+	&:focus {
+		background-color: var(--accent-txt-cl);
+		color: var(--main-dark-theme);
+	}
+
+	&--mode-light {
+		color: var(--main-light-theme);
+	}
+
+	&--mode-dark {
+		color: var(--main-dark-theme);
+	}
+}

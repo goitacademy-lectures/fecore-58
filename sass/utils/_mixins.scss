@@ -1,0 +1,22 @@
+@import "./decimals";
+
+@mixin section($indent: 200px) {
+	padding-top: $indent;
+	padding-bottom: $indent;
+}
+
+@mixin fonts($fw: 400, $fs: 16px, $lh: 20px, $ls: 0.03em) {
+	font-weight: $fw;
+	font-size: $fs;
+	line-height: decimal-round($lh/ $fs);
+	letter-spacing: $ls;
+}
+
+@mixin avatar($size, $circle: false) {
+	width: $size;
+	height: $size;
+
+	@if $circle {
+		border-radius: $size / 2;
+	}
+}
