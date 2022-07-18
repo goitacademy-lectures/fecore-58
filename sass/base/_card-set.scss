@@ -10,5 +10,5 @@
 }
 
 .card-set__item {
-	flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+	flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
