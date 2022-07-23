@@ -121,7 +121,7 @@
 		<!-- Блок унікального контенту на сторінці -->
 		<main>
 			<!-- Секція Hero -->
-			<!-- <section class="hero">
+			<section class="hero">
 				<div class="container hero-container">
 					<div class="hero-left-side">
 						<ul class="hero-list list">
@@ -155,7 +155,7 @@
 						</li>
 					</ul>
 				</div>
-			</section> -->
+			</section>
 
 			<!-- Секція About -->
 			<!-- <section class="about">
@@ -282,7 +282,74 @@
 
 					<ul class="team__list card-set list">
 						<li class="team__item card-set__item">
-							<img class="team__avatar" src="./images/team/img-1.jpg" alt="John Smith" width="370" height="346" />
+							<!-- Дескриптор х -->
+							<!-- <img
+								class="team__avatar"
+								srcset="./images/team/img-1_sm.jpg 1x, ./images/team/img-1_sm@2x.jpg 2x"
+								src="./images/team/img-1_sm.jpg"
+								alt="John Smith"
+								width="418"
+								height="346"
+							/> -->
+
+							<!-- Дескриптор w -->
+							<!-- <img
+								class="team__avatar"
+								srcset="
+									./images/team/w/img-370.jpg 370w,
+									./images/team/w/img-418.jpg 418w,
+									./images/team/w/img-450.jpg 450w,
+									./images/team/w/img-740.jpg 740w,
+									./images/team/w/img-836.jpg 836w,
+									./images/team/w/img-900.jpg 900w
+								"
+								sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (max-width: 767px) 418px, 100vw"
+								src="./images/team/img-1_sm.jpg"
+								alt="John Smith"
+								width="418"
+								height="346"
+							/> -->
+
+							<!-- Тег picture -->
+							<picture>
+								<!-- desktop screen -->
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/team/img-1_lg.webp 1x, ./images/team/img-1_lg@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/team/img-1_lg.jpg 1x, ./images/team/img-1_lg@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- tablet screen -->
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/team/img-1_md.webp 1x, ./images/team/img-1_md@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/team/img-1_md.jpg 1x, ./images/team/img-1_md@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- mobile screen -->
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/team/img-1_sm.webp 1x, ./images/team/img-1_sm@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/team/img-1_sm.jpg 1x, ./images/team/img-1_sm@2x.jpg 2x"
+									type="image/jpg"
+								/>
+								<img src="./images/team/img-1_sm.jpg" alt="John Smith" width="418" height="346" />
+							</picture>
+
 							<div class="team__wrapper">
 								<h3 class="team__subtitle" lang="en">John Smith</h3>
 								<p class="team__position" lang="en">Extreme Barber</p>
@@ -343,7 +410,44 @@
 							</div>
 						</li>
 						<li class="team__item card-set__item">
-							<img class="team-avatar" src="./images/team/img-2.jpg" alt="Michele Doe" width="370" height="346" />
+							<picture>
+								<!-- desktop screen -->
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/team/img-2_lg.webp 1x, ./images/team/img-2_lg@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/team/img-2_lg.jpg 1x, ./images/team/img-2_lg@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- tablet screen -->
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/team/img-2_md.webp 1x, ./images/team/img-2_md@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/team/img-2_md.jpg 1x, ./images/team/img-2_md@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- mobile screen -->
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/team/img-2_sm.webp 1x, ./images/team/img-2_sm@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/team/img-2_sm.jpg 1x, ./images/team/img-2_sm@2x.jpg 2x"
+									type="image/jpg"
+								/>
+								<img src="./images/team/img-2_sm.jpg" alt="Michele Doe" width="418" height="346" />
+							</picture>
 							<div class="team__wrapper">
 								<h3 class="team__subtitle" lang="en">Michele Doe</h3>
 								<p class="team__position" lang="en">Extreme Barber</p>
@@ -404,7 +508,44 @@
 							</div>
 						</li>
 						<li class="team__item card-set__item">
-							<img class="team-avatar" src="./images/team/img-3.jpg" alt="Alan Black" width="370" height="346" />
+							<picture>
+								<!-- desktop screen -->
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/team/img-3_lg.webp 1x, ./images/team/img-3_lg@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/team/img-3_lg.jpg 1x, ./images/team/img-3_lg@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- tablet screen -->
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/team/img-3_md.webp 1x, ./images/team/img-3_md@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/team/img-3_md.jpg 1x, ./images/team/img-3_md@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- mobile screen -->
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/team/img-3_sm.webp 1x, ./images/team/img-3_sm@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/team/img-3_sm.jpg 1x, ./images/team/img-3_sm@2x.jpg 2x"
+									type="image/jpg"
+								/>
+								<img src="./images/team/img-3_sm.jpg" alt="Alan Black" width="418" height="346" />
+							</picture>
 							<div class="team__wrapper">
 								<h3 class="team__subtitle" lang="en">Alan Black</h3>
 								<p class="team__position" lang="en">Extreme Barber</p>
@@ -475,13 +616,44 @@
 					<h2 hidden>Примеры работ</h2>
 					<ul class="portfolio__list list card-set">
 						<li class="portfolio__item card-set__item">
-							<img
-								class="portfolio__pic"
-								src="./images/portfolio/portfolio-1.jpg"
-								alt="Пример работы 1"
-								width="270"
-								height="360"
-							/>
+							<picture>
+								<!-- desktop screen -->
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/portfolio/portfolio-1_lg.webp 1x, ./images/portfolio/portfolio-1_lg@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/portfolio/portfolio-1_lg.jpg 1x, ./images/portfolio/portfolio-1_lg@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- tablet screen -->
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/portfolio/portfolio-1_md.webp 1x, ./images/portfolio/portfolio-1_md@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/portfolio/portfolio-1_md.jpg 1x, ./images/portfolio/portfolio-1_md@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- mobile screen -->
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/portfolio/portfolio-1_sm.webp 1x, ./images/portfolio/portfolio-1_sm@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/portfolio/portfolio-1_sm.jpg 1x, ./images/portfolio/portfolio-1_sm@2x.jpg 2x"
+									type="image/jpg"
+								/>
+								<img src="./images/portfolio/portfolio-1_sm.jpg" alt="Пример работы 1" width="418" height="360" />
+							</picture>
 							<div class="overlay">
 								<p class="overlay__desc"
 									>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur! Lorem ipsum dolor sit amet
@@ -490,13 +662,50 @@
 							</div>
 						</li>
 						<li class="portfolio__item card-set__item">
-							<img
-								class="portfolio-pic"
-								src="./images/portfolio/portfolio-2.jpg"
-								alt="Пример работы 2"
-								width="270"
-								height="360"
-							/>
+							<picture>
+								<!-- desktop screen -->
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/portfolio/portfolio-2_lg.webp 1x, ./images/portfolio/portfolio-2_lg@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/portfolio/portfolio-2_lg.jpg 1x, ./images/portfolio/portfolio-2_lg@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- tablet screen -->
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/portfolio/portfolio-2_md.webp 1x, ./images/portfolio/portfolio-2_md@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/portfolio/portfolio-2_md.jpg 1x, ./images/portfolio/portfolio-2_md@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- mobile screen -->
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/portfolio/portfolio-2_sm.webp 1x, ./images/portfolio/portfolio-2_sm@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/portfolio/portfolio-2_sm.jpg 1x, ./images/portfolio/portfolio-2_sm@2x.jpg 2x"
+									type="image/jpg"
+								/>
+								<img
+									class="portfolio-pic"
+									src="./images/portfolio/portfolio-2_sm.jpg"
+									alt="Пример работы 2"
+									width="418"
+									height="360"
+								/>
+							</picture>
 							<div class="overlay">
 								<p class="overlay__desc"
 									>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur! Lorem ipsum dolor sit amet
@@ -505,13 +714,50 @@
 							</div>
 						</li>
 						<li class="portfolio__item card-set__item">
-							<img
-								class="portfolio-pic"
-								src="./images/portfolio/portfolio-3.jpg"
-								alt="Пример работы 3"
-								width="270"
-								height="360"
-							/>
+							<picture>
+								<!-- desktop screen -->
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/portfolio/portfolio-3_lg.webp 1x, ./images/portfolio/portfolio-3_lg@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/portfolio/portfolio-3_lg.jpg 1x, ./images/portfolio/portfolio-3_lg@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- tablet screen -->
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/portfolio/portfolio-3_md.webp 1x, ./images/portfolio/portfolio-3_md@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/portfolio/portfolio-3_md.jpg 1x, ./images/portfolio/portfolio-3_md@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- mobile screen -->
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/portfolio/portfolio-3_sm.webp 1x, ./images/portfolio/portfolio-3_sm@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/portfolio/portfolio-3_sm.jpg 1x, ./images/portfolio/portfolio-3_sm@2x.jpg 2x"
+									type="image/jpg"
+								/>
+								<img
+									class="portfolio-pic"
+									src="./images/portfolio/portfolio-3_sm.jpg"
+									alt="Пример работы 3"
+									width="418"
+									height="360"
+								/>
+							</picture>
 							<div class="overlay">
 								<p class="overlay__desc"
 									>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur! Lorem ipsum dolor sit amet
@@ -520,13 +766,50 @@
 							</div>
 						</li>
 						<li class="portfolio__item card-set__item">
-							<img
-								class="portfolio-pic"
-								src="./images/portfolio/portfolio-4.jpg"
-								alt="Пример работы 4"
-								width="270"
-								height="360"
-							/>
+							<picture>
+								<!-- desktop screen -->
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/portfolio/portfolio-4_lg.webp 1x, ./images/portfolio/portfolio-4_lg@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/portfolio/portfolio-4_lg.jpg 1x, ./images/portfolio/portfolio-4_lg@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- tablet screen -->
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/portfolio/portfolio-4_md.webp 1x, ./images/portfolio/portfolio-4_md@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/portfolio/portfolio-4_md.jpg 1x, ./images/portfolio/portfolio-4_md@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- mobile screen -->
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/portfolio/portfolio-4_sm.webp 1x, ./images/portfolio/portfolio-4_sm@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/portfolio/portfolio-4_sm.jpg 1x, ./images/portfolio/portfolio-4_sm@2x.jpg 2x"
+									type="image/jpg"
+								/>
+								<img
+									class="portfolio-pic"
+									src="./images/portfolio/portfolio-4_sm.jpg"
+									alt="Пример работы 4"
+									width="418"
+									height="360"
+								/>
+							</picture>
 							<div class="overlay">
 								<p class="overlay__desc"
 									>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur! Lorem ipsum dolor sit amet

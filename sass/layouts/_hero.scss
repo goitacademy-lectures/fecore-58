@@ -4,11 +4,44 @@
 	margin: 0 auto;
 
 	background-color: #191c26;
-	background-image: url(../images/hero/hero-bg.jpg), linear-gradient(to right, #fff 155px, rgba(25, 28, 38, 0.2) 155px);
 
-	background-position: top right, center;
+	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 1125px 680px, cover;
+	background-size: cover;
+
+	background-image: url(../images/hero/hero-bg_sm.jpg);
+
+	// Для ретіна екранів мобільна версія
+	@media (min-device-pixel-ratio: 2),
+		(-webkit-min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+		background-image: url(../images/hero/hero-bg_sm@2x.jpg);
+	}
+
+	@media screen and (min-width: 768px) {
+		background-image: url(../images/hero/hero-bg_md.jpg);
+
+		// Для ретіна екранів планшетна версія
+		@media (min-device-pixel-ratio: 2),
+			(-webkit-min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url(../images/hero/hero-bg_md@2x.jpg);
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		background-image: url(../images/hero/hero-bg_lg.jpg);
+
+		// Для ретіна екранів десктопна версія
+		@media (min-device-pixel-ratio: 2),
+			(-webkit-min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url(../images/hero/hero-bg_lg@2x.jpg);
+		}
+	}
 }
 
 .hero-container {
@@ -16,10 +49,14 @@
 }
 
 .hero-left-side {
-	display: flex;
-	align-items: flex-end;
-	max-width: 100px;
-	flex-basis: 100px;
+	display: none;
+
+	@media screen and(min-with: 768px) {
+		display: flex;
+		align-items: flex-end;
+		max-width: 100px;
+		flex-basis: 100px;
+	}
 }
 
 .hero-list {
@@ -47,6 +84,10 @@
 	flex-grow: 1;
 	padding-top: 272px;
 	padding-bottom: 206px;
+
+	@media screen and(max-width: 767px) {
+		margin: 0;
+	}
 }
 
 .hero-descr {
@@ -54,4 +95,8 @@
 	line-height: 1.67;
 	letter-spacing: 0.02em;
 	color: #9da4bd;
+
+	@media screen and(max-width: 1199px) {
+		font-size: 16px;
+	}
 }

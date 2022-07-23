@@ -6,6 +6,10 @@
 	transform: translateY(-50%);
 
 	color: #fff;
+
+	@media screen and(max-width: 767px) {
+		display: none;
+	}
 }
 
 .slider-pagination-item {
@@ -33,6 +37,10 @@
 	display: flex;
 	align-items: center;
 	gap: 26px;
+
+	@media screen and(max-width: 767px) {
+		display: none;
+	}
 }
 .slider-btn {
 	padding: 8px 0;
